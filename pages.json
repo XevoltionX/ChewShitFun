@@ -1,0 +1,25 @@
+{
+  "pages": [
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/calendar/index",
+      "style": {
+        "navigationBarTitleText": "ChewShitFun",
+        "navigationBarBackgroundColor": "#4D6BFE",
+        "navigationBarTextStyle": "white"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "ChewShitFun",
+    "navigationBarBackgroundColor": "#4D6BFE",
+    "backgroundColor": "#FFFFFF"
+  }
+}
