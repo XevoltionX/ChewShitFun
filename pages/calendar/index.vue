@@ -1,25 +1,32 @@
 <template>
-  <view class="page">
-    <text class="placeholder">📅 日历页（下一步实现）</text>
+  <view class="calendar-page">
+    <calendar-grid @cell-click="handleCellClick" />
     <custom-tabbar />
   </view>
 </template>
 
 <script setup>
+import { onShow } from '@dcloudio/uni-app'
+import { usePoopStore } from '@/stores/poop.js'
+import CalendarGrid from '@/components/calendar-grid.vue'
 import CustomTabbar from '@/components/custom-tabbar.vue'
+
+const poopStore = usePoopStore()
+
+onShow(() => {
+  poopStore.loadFromStorage()
+})
+
+function handleCellClick({ dateStr, count }) {
+  // Bubble card popup will be added in Task 6
+  console.log('click date:', dateStr, 'count:', count)
+}
 </script>
 
 <style lang="scss" scoped>
-.page {
+.calendar-page {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: $color-bg;
   padding-bottom: 70px;
-}
-.placeholder {
-  font-size: 18px;
-  font-weight: $font-weight-base;
-  color: $color-text-light;
 }
 </style>
