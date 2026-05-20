@@ -77,7 +77,7 @@ function close() {
 .popup-overlay {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .popup-bubble {
