@@ -56,7 +56,7 @@ function handleEnter() {
     return
   }
   userStore.setLastUsername(name)
-  uni.reLaunch({ url: '/pages/calendar/index' })
+  uni.switchTab({ url: '/pages/calendar/index' })
 }
 </script>
 

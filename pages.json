@@ -14,8 +14,36 @@
         "navigationBarBackgroundColor": "#4D6BFE",
         "navigationBarTextStyle": "white"
       }
+    },
+    {
+      "path": "pages/record/index",
+      "style": {
+        "navigationBarTitleText": "记录",
+        "navigationBarBackgroundColor": "#4D6BFE",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/user/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationBarBackgroundColor": "#4D6BFE",
+        "navigationBarTextStyle": "white"
+      }
     }
   ],
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#4D6BFE",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/calendar/index", "text": "日历" },
+      { "pagePath": "pages/record/index", "text": "记录" },
+      { "pagePath": "pages/user/index", "text": "用户" }
+    ]
+  },
   "globalStyle": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "ChewShitFun",
