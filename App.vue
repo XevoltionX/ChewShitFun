@@ -59,7 +59,7 @@ export default {
 
 <style>
 page {
-  background-color: #fff;
+  background-color: #ff7c11;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
   font-weight: 600;
   color: #333333;

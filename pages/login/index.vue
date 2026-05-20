@@ -35,28 +35,38 @@
   </view>
 </template>
 
-<script setup>
-import { ref } from 'vue'
+<script>
 import { useUserStore } from '@/stores/user.js'
 
-const userStore = useUserStore()
-userStore.loadConfig()
-
-const username = ref(userStore.config.lastUsername)
-const presetNames = userStore.config.presetNames
-
-function handleEnter() {
-  const name = username.value.trim()
-  if (!name) {
-    uni.showToast({ title: '好歹输入个名字吧~', icon: 'none' })
-    return
-  }
-  if (!presetNames.includes(name)) {
-    uni.showToast({ title: '不在名单上，换一个试试~', icon: 'none' })
-    return
-  }
-  userStore.setLastUsername(name)
-  uni.switchTab({ url: '/pages/calendar/index' })
+export default {
+  data() {
+    return {
+      username: '',
+      presetNames: [],
+    }
+  },
+  created() {
+    const userStore = useUserStore()
+    userStore.loadConfig()
+    this.username = userStore.config.lastUsername
+    this.presetNames = userStore.config.presetNames
+  },
+  methods: {
+    handleEnter() {
+      const userStore = useUserStore()
+      const name = this.username.trim()
+      if (!name) {
+        uni.showToast({ title: '好歹输入个名字吧~', icon: 'none' })
+        return
+      }
+      if (!this.presetNames.includes(name)) {
+        uni.showToast({ title: '不在名单上，换一个试试~', icon: 'none' })
+        return
+      }
+      userStore.setLastUsername(name)
+      uni.switchTab({ url: '/pages/calendar/index' })
+    },
+  },
 }
 </script>
 

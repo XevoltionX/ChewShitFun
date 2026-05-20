@@ -5,8 +5,12 @@
   </view>
 </template>
 
-<script setup>
+<script>
 import CustomTabbar from '@/components/custom-tabbar.vue'
+
+export default {
+  components: { CustomTabbar },
+}
 </script>
 
 <style scoped>

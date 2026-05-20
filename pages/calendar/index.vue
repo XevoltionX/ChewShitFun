@@ -14,31 +14,35 @@
   </view>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-import { onShow } from '@dcloudio/uni-app'
+<script>
 import { usePoopStore } from '@/stores/poop.js'
 import CalendarGrid from '@/components/calendar-grid.vue'
 import DayCardPopup from '@/components/day-card-popup.vue'
 import CustomTabbar from '@/components/custom-tabbar.vue'
 
-const poopStore = usePoopStore()
-
-onShow(() => {
-  poopStore.loadFromStorage()
-})
-
-const popupVisible = ref(false)
-const popupDateStr = ref('')
-const popupX = ref(180)
-const popupY = ref(300)
-
-function handleCellClick({ dateStr, count }) {
-  popupDateStr.value = dateStr
-  popupVisible.value = true
-  const systemInfo = uni.getSystemInfoSync()
-  popupX.value = systemInfo.windowWidth / 2
-  popupY.value = systemInfo.windowHeight * 0.28
+export default {
+  components: { CalendarGrid, DayCardPopup, CustomTabbar },
+  data() {
+    return {
+      popupVisible: false,
+      popupDateStr: '',
+      popupX: 180,
+      popupY: 300,
+    }
+  },
+  onShow() {
+    const poopStore = usePoopStore()
+    poopStore.loadFromStorage()
+  },
+  methods: {
+    handleCellClick({ dateStr }) {
+      this.popupDateStr = dateStr
+      this.popupVisible = true
+      const systemInfo = uni.getSystemInfoSync()
+      this.popupX = systemInfo.windowWidth / 2
+      this.popupY = systemInfo.windowHeight * 0.28
+    },
+  },
 }
 </script>
 
