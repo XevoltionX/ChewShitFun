@@ -1,0 +1,72 @@
+<!--
+  日历格子样式对比
+  选定日期：2026-05-20
+  最终选择：方案 D — 白底为主 + 深浅💩底色区分
+  选定理由：清爽、格子边界清晰、不与其他色系冲突
+-->
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><style>
+  body { font-family: -apple-system, sans-serif; padding: 24px; background: #f9f9f9; }
+  h2 { margin: 20px 0 8px; font-size: 16px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 12px; }
+  .row { display: flex; gap: 24px; flex-wrap: wrap; }
+  .card { background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); min-width: 320px; }
+  .cells { display: grid; grid-template-columns: repeat(4, 56px); gap: 6px; justify-content: center; }
+  .cell { border-radius: 6px; padding: 6px 0; text-align: center; }
+  .cell .date { font-size: 13px; }
+  .cell .emoji { font-size: 18px; margin-top: 2px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .tag-chosen { background: #4D6BFE; color: #fff; }
+  .tag-other { background: #e0e0e0; color: #666; }
+</style></head>
+<body>
+
+<div class="row">
+  <!-- A -->
+  <div class="card">
+    <span class="tag tag-other">A — 棕色渐变</span>
+    <div class="cells" style="margin-top:12px;">
+      <div class="cell" style="background:#fafafa;border:1px solid #e8e8e8;"><div class="date" style="color:#333;">5</div><div class="emoji" style="opacity:0.15;">💩</div></div>
+      <div class="cell" style="background:#f5e6d3;border:1px solid #dcc8a8;"><div class="date" style="color:#333;">12</div><div class="emoji">💩</div></div>
+      <div class="cell" style="background:#e8c9a0;border:1px solid #c49a6c;"><div class="date" style="color:#fff;">16</div><div class="emoji">💩</div></div>
+      <div class="cell" style="background:#c49a6c;border:1px solid #a07840;"><div class="date" style="color:#fff;">20</div><div class="emoji">💩</div></div>
+    </div>
+  </div>
+
+  <!-- B -->
+  <div class="card">
+    <span class="tag tag-other">B — 深蓝渐变</span>
+    <div class="cells" style="margin-top:12px;">
+      <div class="cell" style="background:#fafafa;border:1px solid #e8e8e8;"><div class="date" style="color:#333;">5</div><div class="emoji" style="opacity:0.15;">💩</div></div>
+      <div class="cell" style="background:#e8edff;border:1px solid #c4d2ff;"><div class="date" style="color:#333;">12</div><div class="emoji">💩</div></div>
+      <div class="cell" style="background:#b8c8ff;border:1px solid #8fa8ff;"><div class="date" style="color:#fff;">16</div><div class="emoji">💩</div></div>
+      <div class="cell" style="background:#6b82ff;border:1px solid #4D6BFE;"><div class="date" style="color:#fff;">20</div><div class="emoji">💩</div></div>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div class="card">
+    <span class="tag tag-other">C — 棕色底+深蓝强调边框</span>
+    <div class="cells" style="margin-top:12px;">
+      <div class="cell" style="background:#fafafa;border:2px solid #eee;border-radius:10px;"><div class="date" style="color:#333;">5</div><div class="emoji" style="opacity:0.15;">💩</div></div>
+      <div class="cell" style="background:#f5e6d3;border:2px solid #e0cfb8;border-radius:10px;"><div class="date" style="color:#333;">12</div><div class="emoji">💩</div></div>
+      <div class="cell" style="background:#e8c9a0;border:2px solid #c49a6c;border-radius:10px;"><div class="date" style="color:#fff;">16</div><div class="emoji">💩</div></div>
+      <div class="cell" style="background:#c49a6c;border:2px solid #4D6BFE;border-radius:10px;"><div class="date" style="color:#fff;">20</div><div class="emoji">💩</div></div>
+    </div>
+  </div>
+
+  <!-- D — CHOSEN -->
+  <div class="card" style="border: 2px solid #4D6BFE;">
+    <span class="tag tag-chosen">✅ D — 白底+深浅💩底色（选中）</span>
+    <div class="cells" style="margin-top:12px;">
+      <div class="cell" style="background:#fff;border:1.5px solid #e0e0e0;"><div class="date" style="color:#333;">5</div><div class="emoji" style="opacity:0.12;">💩</div></div>
+      <div class="cell" style="background:#fdf5ee;border:1.5px solid #e8d5c0;"><div class="date" style="color:#333;">12</div><div class="emoji">💩</div></div>
+      <div class="cell" style="background:#fbe8d0;border:1.5px solid #d4a97a;"><div class="date" style="color:#333;">16</div><div class="emoji">💩</div></div>
+      <div class="cell" style="background:#f5d4a8;border:1.5px solid #b8783a;"><div class="date" style="color:#333;">20</div><div class="emoji">💩</div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

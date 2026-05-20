@@ -1,0 +1,89 @@
+<!--
+  每日详情卡片样式对比
+  选定日期：2026-05-20
+  最终选择：方案 C — 气泡弹出（从日期位置冒出）
+  选定理由：最轻巧、有趣、上下文关联强，点击空白处关闭
+-->
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><style>
+  body { font-family: -apple-system, sans-serif; padding: 24px; background: #f9f9f9; }
+  h2 { margin: 20px 0 8px; font-size: 16px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 12px; }
+  .row { display: flex; gap: 24px; flex-wrap: wrap; }
+  .card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); min-width: 340px; }
+  .mockup-body { background:#f5f0e8; min-height:360px; display:flex; align-items:center; justify-content:center; position:relative; border-radius:8px; }
+  .calendar-bg { text-align:center; opacity:0.3; }
+  .calendar-bg .month { font-weight:600; margin-bottom:8px; }
+  .calendar-bg .grid { display:grid; grid-template-columns:repeat(7,36px); gap:4px; font-size:13px; }
+  .tag { display:inline-block; padding:2px 8px; border-radius:4px; font-size:11px; font-weight:600; }
+  .tag-chosen { background:#4D6BFE; color:#fff; }
+  .tag-other { background:#e0e0e0; color:#666; }
+</style></head>
+<body>
+
+<div class="row">
+  <!-- A -->
+  <div class="card">
+    <span class="tag tag-other">A — 居中弹窗卡片</span>
+    <div class="mockup-body" style="margin-top:12px;">
+      <div class="calendar-bg"><div class="month">2026年5月</div><div class="grid"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span style="background:#a8d5ba;border-radius:50%;">16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span></div></div>
+      <div style="position:absolute;background:#fffdf7;border-radius:20px;padding:16px 20px;box-shadow:0 8px 32px rgba(0,0,0,0.15);max-width:260px;font-size:12px;">
+        <div style="font-weight:700;margin-bottom:8px;">💩 5月16日 · 拉屎2次</div>
+        <div style="background:#f9f3e8;border-radius:8px;padding:6px 10px;margin-bottom:4px;">第①次 14:30 · 正常·适中·中等</div>
+        <div style="background:#f9f3e8;border-radius:8px;padding:6px 10px;margin-bottom:8px;">第②次 20:15 · 偏稀·浓郁·较少</div>
+        <div style="border-top:1px dashed #e0d8c8;padding-top:6px;color:#999;">🍽 明天多吃香蕉压压惊~</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B -->
+  <div class="card">
+    <span class="tag tag-other">B — 底部滑出卡片</span>
+    <div class="mockup-body" style="margin-top:12px;">
+      <div class="calendar-bg"><div class="month">2026年5月</div><div class="grid"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span style="background:#a8d5ba;border-radius:50%;">16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span></div></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;background:#fffdf7;border-radius:20px 20px 0 0;padding:14px 20px 20px;box-shadow:0 -4px 24px rgba(0,0,0,0.12);font-size:12px;">
+        <div style="width:40px;height:4px;background:#ddd;border-radius:2px;margin:0 auto 10px;"></div>
+        <div style="font-weight:700;margin-bottom:8px;">💩 5月16日 · 拉屎2次</div>
+        <div style="background:#f9f3e8;border-radius:8px;padding:6px 10px;margin-bottom:4px;">第①次 14:30 · 正常·适中·中等</div>
+        <div style="background:#f9f3e8;border-radius:8px;padding:6px 10px;margin-bottom:8px;">第②次 20:15 · 偏稀·浓郁·较少</div>
+        <div style="border-top:1px dashed #e0d8c8;padding-top:6px;color:#999;">🍽 明天多吃香蕉压压惊~</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C — CHOSEN -->
+  <div class="card" style="border: 2px solid #4D6BFE;">
+    <span class="tag tag-chosen">✅ C — 气泡弹出（选中）</span>
+    <div class="mockup-body" style="margin-top:12px;">
+      <div class="calendar-bg"><div class="month">2026年5月</div><div class="grid"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span style="background:#a8d5ba;border-radius:50%;">16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span></div></div>
+      <div style="position:absolute;top:180px;left:50%;transform:translateX(-50%);background:#fffdf7;border-radius:16px;padding:16px 20px;box-shadow:0 6px 24px rgba(0,0,0,0.14);max-width:260px;font-size:12px;">
+        <div style="font-weight:700;margin-bottom:8px;">💩 5月16日 · 拉屎2次</div>
+        <div style="color:#666;margin-bottom:3px;">第①次 14:30 · 正常·适中·中等</div>
+        <div style="color:#666;margin-bottom:8px;">第②次 20:15 · 偏稀·浓郁·较少</div>
+        <div style="border-top:1px dashed #e0d8c8;padding-top:6px;color:#999;">🍽 明天多吃香蕉压压惊~</div>
+        <div style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #fffdf7;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D -->
+  <div class="card">
+    <span class="tag tag-other">D — 全屏遮罩+居中卡片</span>
+    <div class="mockup-body" style="margin-top:12px;">
+      <div class="calendar-bg"><div class="month">2026年5月</div><div class="grid"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span style="background:#a8d5ba;border-radius:50%;">16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span></div></div>
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);display:flex;align-items:center;justify-content:center;">
+        <div style="background:#fffdf7;border-radius:20px;padding:16px 20px;box-shadow:0 8px 32px rgba(0,0,0,0.2);max-width:260px;font-size:12px;text-align:center;">
+          <div style="font-size:36px;">🚽</div>
+          <div style="font-weight:700;margin-bottom:6px;">5月16日 战报 · 2次</div>
+          <div style="color:#666;margin-bottom:3px;">🕑 14:30 · 正常·适中·中等</div>
+          <div style="color:#666;margin-bottom:8px;">🕗 20:15 · 偏稀·浓郁·较少</div>
+          <div style="background:#fff3cd;border-radius:8px;padding:6px 10px;color:#886633;">😏 今天走了两次货，明天整点香蕉吧~</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
