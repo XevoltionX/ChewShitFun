@@ -4,11 +4,14 @@ const KEYS = {
   ACHIEVEMENTS: 'csf_achievements',
 }
 
+export const DEFAULT_USER_CONFIG = { lastUsername: '', presetNames: ['余苟千', '朋友A', '朋友B', '朋友C'] }
+
 export function getRecords() {
   try {
     const data = uni.getStorageSync(KEYS.POOP_RECORDS)
     return data ? JSON.parse(data) : []
   } catch (e) {
+    console.error('读取记录失败:', e)
     return []
   }
 }
@@ -24,9 +27,10 @@ export function saveRecords(records) {
 export function getUserConfig() {
   try {
     const data = uni.getStorageSync(KEYS.USER_CONFIG)
-    return data ? JSON.parse(data) : { lastUsername: '', presetNames: ['余苟千', '朋友A', '朋友B', '朋友C'] }
+    return data ? JSON.parse(data) : { ...DEFAULT_USER_CONFIG }
   } catch (e) {
-    return { lastUsername: '', presetNames: ['余苟千', '朋友A', '朋友B', '朋友C'] }
+    console.error('读取配置失败:', e)
+    return { ...DEFAULT_USER_CONFIG }
   }
 }
 
@@ -43,6 +47,7 @@ export function getAchievements() {
     const data = uni.getStorageSync(KEYS.ACHIEVEMENTS)
     return data ? JSON.parse(data) : {}
   } catch (e) {
+    console.error('读取成就失败:', e)
     return {}
   }
 }

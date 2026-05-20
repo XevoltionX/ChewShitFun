@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
-import { getUserConfig, saveUserConfig } from '@/utils/storage.js'
+import { getUserConfig, saveUserConfig, DEFAULT_USER_CONFIG } from '@/utils/storage.js'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
-    config: { lastUsername: '', presetNames: ['余苟千', '朋友A', '朋友B', '朋友C'] },
+    config: { ...DEFAULT_USER_CONFIG },
     currentUser: '',
   }),
 
