@@ -57,12 +57,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 page {
-  background-color: $color-bg;
+  background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
-  font-weight: $font-weight-base;
-  color: $color-text;
+  font-weight: 600;
+  color: #333333;
   -webkit-font-smoothing: antialiased;
 }
 </style>

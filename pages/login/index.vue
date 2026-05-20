@@ -60,10 +60,10 @@ function handleEnter() {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .login-page {
   min-height: 100vh;
-  background-color: $color-primary-dark;
+  background-color: #1a2744;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,11 +103,11 @@ function handleEnter() {
 .name-input {
   height: 52px;
   background: rgba(255, 255, 255, 0.12);
-  border: $border-width-thick solid rgba(255, 255, 255, 0.25);
-  border-radius: $border-radius-base;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
   padding: 0 18px;
   font-size: 17px;
-  font-weight: $font-weight-base;
+  font-weight: 600;
   color: #fff;
 }
 
@@ -121,7 +121,7 @@ function handleEnter() {
 .hint-label {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
-  font-weight: $font-weight-base;
+  font-weight: 600;
 }
 
 .hint-names {
@@ -132,10 +132,10 @@ function handleEnter() {
 
 .hint-name-tag {
   font-size: 12px;
-  font-weight: $font-weight-base;
+  font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.15);
-  border-radius: $border-radius-lg;
+  border-radius: 20px;
   padding: 4px 14px;
   border: 2px solid rgba(255, 255, 255, 0.25);
 }
@@ -143,12 +143,12 @@ function handleEnter() {
 .btn-enter {
   margin-top: 12px;
   height: 52px;
-  background: $color-accent;
-  border-radius: $border-radius-base;
+  background: #8B5E3C;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: $border-width-thick solid darken($color-accent, 8%);
+  border: 3px solid #7a5230;
 }
 
 .btn-text {

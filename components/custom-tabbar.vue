@@ -32,7 +32,7 @@ function switchTab(index) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .custom-tabbar {
   position: fixed;
   bottom: 0;
@@ -43,7 +43,7 @@ function switchTab(index) {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-top: $border-width-base solid #eee;
+  border-top: 2px solid #eee;
   padding-bottom: env(safe-area-inset-bottom);
   z-index: 999;
 }
@@ -62,12 +62,12 @@ function switchTab(index) {
 
 .tabbar-text {
   font-size: 11px;
-  font-weight: $font-weight-base;
-  color: $color-text-light;
+  font-weight: 600;
+  color: #999999;
 }
 
 .tabbar-text.active {
-  color: $color-primary;
+  color: #4D6BFE;
   font-weight: 700;
 }
 </style>

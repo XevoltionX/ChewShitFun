@@ -42,10 +42,10 @@ function handleCellClick({ dateStr, count }) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .calendar-page {
   min-height: 100vh;
-  background: $color-bg;
+  background: #fff;
   padding-bottom: 70px;
 }
 </style>

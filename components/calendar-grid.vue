@@ -91,7 +91,7 @@ function changeMonth(delta) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .calendar-grid {
   padding: 12px 10px;
 }
@@ -107,7 +107,7 @@ function changeMonth(delta) {
 .month-title {
   font-size: 20px;
   font-weight: 700;
-  color: $color-text;
+  color: #333333;
 }
 
 .month-arrow {
@@ -118,9 +118,9 @@ function changeMonth(delta) {
   justify-content: center;
   font-size: 26px;
   font-weight: 700;
-  color: $color-primary;
-  border: $border-width-base solid $color-primary;
-  border-radius: $border-radius-lg;
+  color: #4D6BFE;
+  border: 2px solid #4D6BFE;
+  border-radius: 20px;
 }
 
 .weekday-row {
@@ -134,7 +134,7 @@ function changeMonth(delta) {
   text-align: center;
   font-size: 13px;
   font-weight: 700;
-  color: $color-text-light;
+  color: #999999;
   padding: 6px 0;
 }
 
@@ -156,7 +156,7 @@ function changeMonth(delta) {
 .cell-date {
   font-size: 14px;
   font-weight: 700;
-  color: $color-text;
+  color: #333333;
 }
 
 .cell-emoji {

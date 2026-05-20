@@ -9,7 +9,7 @@
 import CustomTabbar from '@/components/custom-tabbar.vue'
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .page {
   min-height: 100vh;
   display: flex;
@@ -19,7 +19,7 @@ import CustomTabbar from '@/components/custom-tabbar.vue'
 }
 .placeholder {
   font-size: 18px;
-  font-weight: $font-weight-base;
-  color: $color-text-light;
+  font-weight: 600;
+  color: #999999;
 }
 </style>

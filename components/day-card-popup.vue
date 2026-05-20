@@ -73,7 +73,7 @@ function close() {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .popup-overlay {
   position: fixed;
   inset: 0;
@@ -88,7 +88,7 @@ function close() {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   width: 280px;
   transform: translateX(-50%);
-  border: $border-width-base solid #eee;
+  border: 2px solid #eee;
 }
 
 .bubble-arrow {
@@ -117,7 +117,7 @@ function close() {
 .bubble-date {
   font-size: 17px;
   font-weight: 700;
-  color: $color-text;
+  color: #333333;
 }
 
 .bubble-count {
@@ -125,13 +125,13 @@ function close() {
   background: #f0e6d3;
   border-radius: 14px;
   padding: 3px 12px;
-  border: $border-width-base solid #e0d0b8;
+  border: 2px solid #e0d0b8;
 }
 
 .count-text {
   font-size: 12px;
   font-weight: 700;
-  color: $color-accent;
+  color: #8B5E3C;
 }
 
 .bubble-records {
@@ -143,9 +143,9 @@ function close() {
 
 .record-item {
   background: #f9f5f0;
-  border-radius: $border-radius-base;
+  border-radius: 12px;
   padding: 10px 14px;
-  border: $border-width-base solid #eee;
+  border: 2px solid #eee;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -155,19 +155,19 @@ function close() {
 .record-index {
   font-size: 13px;
   font-weight: 700;
-  color: $color-primary;
+  color: #4D6BFE;
 }
 
 .record-time {
   font-size: 13px;
-  font-weight: $font-weight-base;
-  color: $color-text;
+  font-weight: 600;
+  color: #333333;
 }
 
 .record-detail {
   font-size: 12px;
-  font-weight: $font-weight-base;
-  color: $color-text-light;
+  font-weight: 600;
+  color: #999999;
   width: 100%;
   margin-top: 2px;
 }
@@ -176,15 +176,15 @@ function close() {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
-  font-weight: $font-weight-base;
-  color: $color-text-light;
+  font-weight: 600;
+  color: #999999;
 }
 
 .bubble-advice {
   border-top: 2px dashed #e0d8c8;
   padding-top: 10px;
   font-size: 13px;
-  font-weight: $font-weight-base;
+  font-weight: 600;
   color: #886633;
   line-height: 1.5;
 }
