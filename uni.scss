@@ -24,11 +24,5 @@ $border-radius-lg: 20px;
 $border-width-base: 2px;
 $border-width-thick: 3px;
 
-// === 全局样式 ===
-page {
-  background-color: $color-bg;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
-  font-weight: $font-weight-base;
-  color: $color-text;
-  -webkit-font-smoothing: antialiased;
-}
+// Global styles (page, etc.) are in App.vue to avoid
+// duplication via vite additionalData injection

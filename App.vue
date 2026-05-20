@@ -58,5 +58,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/uni.scss';
+page {
+  background-color: $color-bg;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  font-weight: $font-weight-base;
+  color: $color-text;
+  -webkit-font-smoothing: antialiased;
+}
 </style>
