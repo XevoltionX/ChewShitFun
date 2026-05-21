@@ -1,0 +1,19 @@
+{
+  "name": "chewshitfun",
+  "version": "1.0.0",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "pinia": "^3.0.4",
+    "solarlunar": "^3.1.0"
+  }
+}

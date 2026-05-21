@@ -1,0 +1,64 @@
+{
+	"pages": [
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/calendar/index",
+			"style": {
+				"navigationBarTitleText": "看看你记录的屎诗吧"
+			}
+		},
+		{
+			"path": "pages/record/index",
+			"style": {
+				"navigationBarTitleText": "💩 记录",
+				"disableScroll": true
+			}
+		},
+		{
+			"path": "pages/user/index",
+			"style": {
+				"navigationBarTitleText": "🎢 用户"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "ChewShitFun",
+		"navigationBarBackgroundColor": "#2731ff",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"custom": true,
+		"color": "#8B5E3C",
+		"selectedColor": "#9d622e",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"height": "0px",
+		"list": [
+			{
+				"pagePath": "pages/calendar/index",
+				"text": "战绩",
+				"iconPath": "static/tab_home.png",
+				"selectedIconPath": "static/tab_home_active.png"
+			},
+			{
+				"pagePath": "pages/record/index",
+				"text": "马上拉屎",
+				"iconPath": "static/tab_record.png",
+				"selectedIconPath": "static/tab_record_active.png"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"text": "用户",
+				"iconPath": "static/tab_user.png",
+				"selectedIconPath": "static/tab_user_active.png"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}

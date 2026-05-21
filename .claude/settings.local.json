@@ -1,20 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Skill(superpowers:brainstorming)",
-      "Bash(git *)",
-      "Bash(C:\\\\Users\\\\Administrator\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\superpowers\\\\5.1.0\\\\skills\\\\brainstorming\\\\scripts\\\\start-server.sh *)",
-      "Bash(npm --version)",
+      "Bash(python *)",
+      "Bash(npm init *)",
       "Bash(npm install *)",
-      "Bash(node -e \"const p = require\\('./package.json'\\); console.log\\(JSON.stringify\\({deps: p.dependencies, dev: p.devDependencies}, null, 2\\)\\)\")",
-      "Bash(node -e \"console.log\\(require\\('F:/桌面/ClaudeWork/ChewShitFun/node_modules/@dcloudio/vite-plugin-uni/package.json'\\).version\\)\")",
-      "Bash(node *)",
-      "Bash(npx @dcloudio/uvm@latest)",
-      "Bash(npx create-uni@latest --help)",
-      "Bash(cd /tmp)",
-      "Bash(npx create-uni@latest temp-uni-test --default)",
-      "Read(//f/桌面/ClaudeWork/**)",
-      "Bash(npx degit *)"
+      "Bash(node -e \"const s = require\\('solarlunar'\\); const r = s.solarToLunar\\(2026, 5, 20\\); console.log\\(JSON.stringify\\(r, null, 2\\)\\)\")",
+      "Bash(node -e \"const s = require\\('solarlunar'\\); console.log\\(Object.keys\\(s\\)\\)\")",
+      "Bash(node -e \"const s = require\\('solarlunar'\\).default; const r = s.solarToLunar\\(2026,5,20\\); console.log\\(JSON.stringify\\(r,null,2\\)\\)\")",
+      "Bash(node -e \"const s = require\\('solarlunar'\\).default; console.log\\(typeof s, Object.keys\\(s\\).slice\\(0,10\\)\\)\")",
+      "Bash(node -e \"const m = require\\('solarlunar'\\); const s = m.default || m; console.log\\(Object.keys\\(s\\).filter\\(k => typeof s[k] === 'function'\\)\\)\")",
+      "Bash(node -e \"const s = require\\('solarlunar'\\).default; const r = s.solar2lunar\\(2026,5,20\\); console.log\\(JSON.stringify\\(r,null,2\\)\\)\")"
     ]
   }
 }
